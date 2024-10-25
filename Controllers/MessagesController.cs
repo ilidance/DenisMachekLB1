@@ -8,14 +8,14 @@ public class MessagesController : ControllerBase
 {
     private static List<Message> messages = new List<Message>();
 
-    // Отримати всі повідомлення 
+    // отримати всі повідомлення 
     [HttpGet]
     public IEnumerable<Message> Get()
     {
         return messages;
     }
 
-    // Отримати нове повідомлення
+    // отримати нове повідомлення
     [HttpPost]
     public IActionResult Post([FromBody] Message message)
     {
